@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>neurosec-node</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+    .main {
+      padding: 16px;
+      margin-bottom: 30px;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%
+    }
+
+    .camera-bg {
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+
+      /* Preserve aspet ratio */
+      min-width: 100%;
+      min-height: 100%;
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    .top-right-logo {
+      position: absolute;
+      top: 3%;
+      left: 2%;
+      font-size: 38px;
+      color: white;
+      opacity: 0.5;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background-color: black;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="main">
+    <img  class="camera-bg" style="width: 100%; height:80%; background-attachment: fixed;" id="bg" class="center" src="{{ url_for('video_feed_with_overlay') }}?node_key={{node_key}}">
+  </div>
+
+  <div class="top-right-logo">
+  	<a>neurosec-node</a>
+  </div>
+
+</body>
+</html>

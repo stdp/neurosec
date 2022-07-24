@@ -1,0 +1,4 @@
+__pycache__
+.env
+neurosec_node_cert.pem
+neurosec_node_privkey.pem

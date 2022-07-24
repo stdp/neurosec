@@ -1,0 +1,10 @@
+vidgear[core]
+akida
+cnn2snn
+akida-models
+opencv-python
+#numpy
+imutils
+# neurosec-node
+python-dotenv
+flask
