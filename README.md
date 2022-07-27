@@ -1,6 +1,6 @@
 # Neurosec
 
-A neuromorphic inference wrapper for the popular VidGear video processing library. Neurosec seemlessly allows you to process inference using the Akida neuromorphic processor.
+A neuromorphic inference wrapper for the popular VidGear video processing library. Neurosec seamlessly allows you to process inference using the Akida neuromorphic processor.
 
 For best results, ensure you have an Akida neuromorphic processor installed. If you do not have one, you can purchase one from [Brainchip Inc.](https://shop.brainchipinc.com/):
 

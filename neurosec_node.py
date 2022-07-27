@@ -21,7 +21,11 @@ class NeurosecNode:
             stream_mode=kwargs.get("stream_mode", False),
             model=kwargs.get("model"),
         ).start()
-        self.app = Flask(__name__)
+
+        self.app = Flask(
+            __name__,
+            template_folder=path.join(path.dirname(__file__), "templates"),
+        )
 
     def generate_stream(self, rendered):
         while True:
@@ -61,10 +65,7 @@ class NeurosecNode:
             context = {
                 "node_key": self.node_key,
             }
-            return render_template(
-                path.join(path.dirname(__file__), "templates/index.html"),
-                **context
-            )
+            return render_template("index.html", **context)
 
         @self.app.route("/feed/")
         @auth_required
